@@ -1,0 +1,30 @@
+@import "/src/app/shared/shared.scss";
+
+span.search input {
+  margin: 0 10px;
+  max-width: 400px;
+}
+
+h4 {
+  padding: 20px 0 10px 10px;
+}
+
+.to-do {
+  background-color: $gray-light;
+  box-shadow: 1px 1px 4px $gray;
+  padding: 20px 40px;
+  border-radius: 5px;
+  margin: 10px;
+
+  li {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr;
+    list-style: none;
+  }
+  span {
+    grid-column: 3;
+    color: $blue;
+    text-align: right;
+  }
+}

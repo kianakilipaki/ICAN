@@ -1,0 +1,132 @@
+<div id="menu">
+  <!-- Secondary Navigation -->
+  <div id="logout-nav" [className]="isActive ? 'close' : 'open'">
+    <nav>
+      <!-- Organization Name -->
+      <h1 class="hide">{{ organizationName }}</h1>
+
+      <!-- Shared Pages -->
+      <ul>
+        <li>
+          <a routerLink="settings" routerLinkActive="active"
+            ><img class="icon" src="assets/ect/cog.svg" alt="cog" /><span
+              class="hide"
+              >Settings</span
+            >
+          </a>
+        </li>
+        <li>
+          <a routerLink="gotenna" routerLinkActive="active"
+            ><img
+              class="icon"
+              src="assets/ect/connection.svg"
+              alt="connection"
+            /><span class="hide">GoTenna</span></a
+          >
+        </li>
+      </ul>
+
+      <!-- Admin Pages -->
+      <ul>
+        <li>
+          <a routerLink="members" routerLinkActive="active"
+            ><img
+              class="icon"
+              src="assets/ect/members.svg"
+              alt="members"
+            /><span class="hide">Manage Members</span></a
+          >
+        </li>
+        <li>
+          <a routerLink="reports" routerLinkActive="active"
+            ><img class="icon" src="assets/ect/bar-graph.svg" alt="bars" /><span
+              class="hide"
+              >Manage Reports</span
+            ></a
+          >
+        </li>
+      </ul>
+
+      <!-- Logout -->
+      <a class="end" routerLink="logout"
+        ><img class="icon" src="assets/ect/exit.svg" alt="exit" /><span
+          class="hide"
+          >Logout</span
+        ></a
+      >
+    </nav>
+
+    <button id="menu-btn" (click)="isActive = !isActive"></button>
+  </div>
+
+  <!-- Main Navigation -->
+  <div id="main-nav" [className]="isActive ? 'open' : 'close'">
+    <nav>
+      <!-- Organization Name -->
+      <h1 class="hide">{{ organizationName }}</h1>
+
+      <!-- Search Bar -->
+      <span class="hide search"
+        ><label for="search"> <input type="text" placeholder="Search" /> </label
+      ></span>
+
+      <!-- Pages -->
+      <ul>
+        <li>
+          <a routerLink="home" routerLinkActive="active"
+            ><img class="icon" src="assets/ect/home2.svg" alt="home" /><span
+              class="hide"
+              >Home</span
+            ></a
+          >
+        </li>
+        <li>
+          <a routerLink="profile" routerLinkActive="active"
+            ><img
+              class="icon"
+              src="assets/ect/profile.svg"
+              alt="profile"
+            /><span class="hide">Profile</span></a
+          >
+        </li>
+        <li>
+          <a routerLink="forms" routerLinkActive="active"
+            ><img
+              class="icon"
+              src="assets/ect/document-text.svg"
+              alt="doc"
+            /><span class="hide">Forms</span></a
+          >
+        </li>
+        <li>
+          <a routerLink="leadership" routerLinkActive="active"
+            ><img class="icon" src="assets/ect/groups.svg" alt="group" /><span
+              class="hide"
+              >Leadership</span
+            ></a
+          >
+        </li>
+        <li>
+          <a routerLink="messages" routerLinkActive="active"
+            ><img class="icon" src="assets/ect/chat.svg" alt="chat" /><span
+              class="hide"
+              >Messages</span
+            ></a
+          >
+
+          <!-- Open Chats -->
+          <ul>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Profile -->
+      <div class="end profile-snippet hide">
+        <img src="{{ userPic }}" alt="profile pic" />
+        <h3>{{ userName }}</h3>
+        <h4>{{ userTitle }}</h4>
+      </div>
+    </nav>
+  </div>
+</div>

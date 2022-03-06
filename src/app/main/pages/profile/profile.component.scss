@@ -1,0 +1,48 @@
+@import "/src/app/shared/shared.scss";
+
+.profile {
+  position: relative;
+  background-color: #fff;
+  margin: 100px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px $gray;
+  span {
+    font-weight: bold;
+  }
+  p,
+  h3 {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 100px 1fr;
+  }
+  .card-head {
+    background-color: $blue;
+    border-radius: 5px 5px 0 0;
+    padding: 30px 0 50px 260px;
+    .pic {
+      background-color: $gray;
+      border: 5px solid $blue;
+      position: absolute;
+      top: -60px;
+      left: 30px;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 100%;
+      margin-right: 1em;
+    }
+  }
+  .card-content {
+    padding: 30px 120px;
+
+    h5 {
+      color: $red;
+      font-variant: small-caps;
+      margin: 20px 0 10px 0;
+    }
+  }
+}
+
+.addNew {
+  margin: 100px;
+}

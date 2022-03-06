@@ -1,0 +1,49 @@
+<!-- banner -->
+<div id="banner">
+  <h1>{{ welcome }}</h1>
+  <p>{{ instructions }}</p>
+</div>
+
+<!-- to do list -->
+<h3 class="header">To do</h3>
+<div *ngIf="toDos">
+  <ul class="to-do" *ngFor="let item of toDos">
+    <li>
+      {{ item.title }}
+      <a href=""
+        ><img class="icon" src="assets/ect/add-solid.svg" alt="add"
+      /></a>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!toDos">
+  <p><i>Nothing to do</i></p>
+</div>
+
+<!-- announcements -->
+<h3 class="header">Announcements</h3>
+<div *ngIf="announcements">
+  <div class="announcements" *ngFor="let item of announcements">
+    <div *ngIf="isAdmin">
+      <a href=""
+        ><img class="edit-icon icon" src="assets/ect/pencil.svg" alt="edit"
+      /></a>
+    </div>
+
+    <h2>{{ item.title }}</h2>
+    <h4>
+      {{ item.date }} <i> Posted by {{ item.user }}</i>
+    </h4>
+    <p>{{ item.content }}</p>
+  </div>
+</div>
+<div *ngIf="!announcements">
+  <p><i>No new announcements</i></p>
+</div>
+<div *ngIf="isAdmin">
+  <h4 class="addNew">
+    Add new Announcement<a href=""
+      ><img class="icon" src="assets/ect/add-outline.svg" alt="add"
+    /></a>
+  </h4>
+</div>

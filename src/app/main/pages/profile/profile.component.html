@@ -1,0 +1,41 @@
+<!-- profile page -->
+<h3 class="header">Profile Page</h3>
+
+<!-- primary users profiles -->
+<div class="profile" *ngFor="let profile of profiles">
+  <div class="card-head">
+    <a href=""
+      ><img class="edit-icon icon" src="assets/ect/pencil.svg" alt="edit"
+    /></a>
+    <img class="pic" src="{{ profile.pic }}" alt="profile pic" />
+    <h3>
+      Name <span>{{ profile.name }}</span>
+    </h3>
+    <p>
+      Position <span>{{ profile.title }}</span>
+    </p>
+  </div>
+  <div class="card-content">
+    <div *ngIf="!profile.isPrimary">
+      <p>
+        Relation <span>{{ profile.relation }}</span>
+      </p>
+    </div>
+    <h5>Contact Information</h5>
+    <p>
+      Email <span>{{ profile.email }}</span>
+    </p>
+    <p>
+      Phone <span>{{ profile.phone }}</span>
+    </p>
+    <p>
+      Address <span>{{ profile.address }}</span>
+    </p>
+  </div>
+</div>
+
+<!-- Add new profile -->
+<h4 class="addNew">
+  Add new profile
+  <a href=""><img class="icon" src="assets/ect/add-outline.svg" alt="add" /></a>
+</h4>

@@ -1,0 +1,124 @@
+@import "/src/app/shared/shared.scss";
+
+#menu {
+  position: fixed;
+  height: 100vh;
+  display: flex;
+  div {
+    position: relative;
+  }
+  .end {
+    position: absolute;
+    bottom: 0px;
+  }
+  #menu-btn {
+    position: absolute;
+    z-index: 10;
+    top: 10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    border: none;
+    transform: rotate(45deg);
+    background-color: $gray;
+  }
+
+  //open and close menu
+  .open {
+    width: 250px;
+    transition: all 0.5s;
+    a {
+      padding: 25px;
+    }
+    .hide {
+      display: initial;
+    }
+  }
+  .close {
+    width: 50px;
+    transition: all 0.5s;
+    a {
+      padding: 20px 5px;
+    }
+    .hide {
+      display: none;
+    }
+  }
+
+  #main-nav {
+    padding: 20px 0 0 0;
+    height: 100%;
+    background: linear-gradient(#f5f5f5, #98b0be, #446a80);
+    box-shadow: 3px 0px 5px $gray;
+    h1 {
+      padding: 30px;
+    }
+
+    .profile-snippet {
+      img {
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 100%;
+        float: left;
+        margin-right: 1em;
+      }
+      h3,
+      h4 {
+        color: $white;
+      }
+      width: 100%;
+      background-color: $black;
+      padding: 20px;
+    }
+  }
+
+  #logout-nav {
+    padding: 20px 0 0 0;
+    height: 100%;
+    background-color: $gray;
+  }
+
+  nav h1 {
+    font-size: 1.5em;
+    padding: 30px;
+  }
+  nav {
+    li {
+      list-style: none;
+    }
+    a {
+      display: block;
+      color: $black;
+      text-decoration: none;
+    }
+    a:link {
+      color: $black;
+      font-weight: 700;
+      .icon {
+        filter: $black-filter;
+      }
+    }
+    a:hover {
+      color: $red;
+      font-weight: 700;
+      .icon {
+        filter: $red-filter;
+      }
+    }
+    a:active {
+      color: $white;
+      font-weight: 700;
+      .icon {
+        filter: $white-filter;
+      }
+    }
+    a.active {
+      color: $red;
+      font-weight: 700;
+      .icon {
+        filter: $red-filter;
+      }
+    }
+  }
+}

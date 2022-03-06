@@ -1,0 +1,6 @@
+<br />
+<label
+  >Username:
+  <input type="text" placeholder="Enter Username" [(ngModel)]="username"
+/></label>
+<button [disabled]="username === ''" routerLink="/main">Login</button>

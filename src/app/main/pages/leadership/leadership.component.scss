@@ -1,0 +1,26 @@
+@import "/src/app/shared/shared.scss";
+
+.groups {
+  margin: 50px;
+  h4 {
+    padding: 20px 0;
+  }
+  .list {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 80px 200px 200px 200px;
+    justify-items: left;
+    align-items: center;
+    border-top: 1px solid $gray-light;
+  }
+  .pic {
+    background-color: $blue;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  p {
+    font-size: 1em;
+  }
+}

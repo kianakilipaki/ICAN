@@ -1,0 +1,13 @@
+<!-- leadership page -->
+<h3 class="header">Leadership</h3>
+
+<div class="groups" *ngFor="let group of groups">
+  <h4>{{ group.name }}</h4>
+  <div class="list" *ngFor="let profile of group.members">
+    <img class="pic" src="{{ profile.pic }}" alt="profile pic" />
+    <p>{{ profile.name }}</p>
+    <p>{{ profile.title }}</p>
+    <a href=""><img class="icon" src="assets/ect/chat.svg" alt="chat" /></a>
+  </div>
+  <hr />
+</div>

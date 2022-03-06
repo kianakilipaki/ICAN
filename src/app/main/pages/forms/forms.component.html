@@ -1,0 +1,44 @@
+<!-- forms page -->
+<h3 class="header">Forms</h3>
+
+<!-- search -->
+<span class="search"
+  ><label for="search"> <input type="text" placeholder="Search Forms" /> </label
+></span>
+
+<!-- todo -->
+<h4>To Do</h4>
+<div *ngIf="toDos">
+  <ul class="to-do" *ngFor="let item of toDos">
+    <li id="{{ item.id }}">{{ item.title }} <span>Start</span></li>
+  </ul>
+</div>
+<div *ngIf="!toDos">
+  <p><i>Nothing to do</i></p>
+</div>
+
+<!-- completed -->
+<h4>Completed</h4>
+<div *ngIf="toDos">
+  <ul class="to-do" *ngFor="let item of toDos">
+    <li id="{{ item.id }}">
+      {{ item.title }}
+      <p>{{ item.date }}</p>
+      <span>Edit</span>
+    </li>
+  </ul>
+</div>
+<div *ngIf="!toDos">
+  <p><i>No completed items</i></p>
+</div>
+
+<!-- other -->
+<h4>Other Forms</h4>
+<div *ngIf="toDos">
+  <ul class="to-do" *ngFor="let item of toDos">
+    <li id="{{ item.id }}">{{ item.title }} <span>Start</span></li>
+  </ul>
+</div>
+<div *ngIf="!toDos">
+  <p><i>No other forms</i></p>
+</div>
