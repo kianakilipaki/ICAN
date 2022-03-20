@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './login/login.component';
+import { OrgLoginComponent } from './login/org-login/org-login.component';
+import { UserLoginComponent } from './login/user-login/user-login.component';
 import { MainComponent } from './main/main.component';
 import { FormsComponent } from './main/pages/forms/forms.component';
 import { HomeComponent } from './main/pages/home/home.component';
@@ -14,7 +16,15 @@ import { ReportsComponent } from './main/pages/reports/reports.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
-  { path: 'login', component: LoginComponent },
+  {
+    path: 'login',
+    component: LoginComponent,
+    children: [
+      { path: '', component: OrgLoginComponent },
+      { path: 'user-login', component: UserLoginComponent },
+      { path: 'login-main',   redirectTo: '/main/home', pathMatch: 'full' },
+    ]
+  },
   {
     path: 'main',
     component: MainComponent,

@@ -1,2 +1,64 @@
-<h1>Welcome to ICAN!</h1>
-<button class="btn" routerLink="/login">Login</button>
+<div class="landing">
+  <header>
+    <!--Logo-->
+    <img class="logo" src="/assets/logo.svg" alt="logo" />
+    <!--nav-->
+    <nav>
+      <a href="#intro">Home</a>
+      <a href="#about">About</a>
+      <a href="#tech">Technology</a>
+    </nav>
+
+    <!--go to login-->
+    <button class="btn" routerLink="/login">Login</button>
+  </header>
+  <!--Intro-->
+  <div id="intro">
+    <div class="left">
+      <h2>Off Grid Communication</h2>
+      <h1>Stay Connected</h1>
+      <h4>Independent Communication Awareness Network</h4>
+      <button routerLink="/login">Get Started</button> <br />
+      <button id="download">Download App</button>
+    </div>
+    <div class="right">
+      <img src="/assets/Home.png" alt="img" />
+      <img id="phone" src="/assets/report.png" alt="img" />
+    </div>
+  </div>
+
+  <!--about-->
+  <div id="about">
+    <h2>About</h2>
+    <p>
+      The purpose of the ICAN system is to give a leadership team of an
+      organization a method of communicating and organizing itself with or
+      without the use of the electric grid and cellular network. The ICAN system
+      can send out forms to its members to collect information during an
+      emergency, which will be collected by the ICAN system and used to populate
+      various reports. Allowing leadership to organize and direct a response as
+      quickly as possible.
+    </p>
+  </div>
+
+  <!--Intro-->
+  <div id="tech">
+    <h2>Technology</h2>
+    <p>
+      During emergencies when electric power and cellular towers are still
+      functioning, the ICAN system will utilize standard texting services to
+      contact all members of the organization. When the electric grid and
+      cellular networks are down, the ICAN system will utilize a mesh network of
+      private single user antennas made by GoTenna. These miniature antennas
+      connect with the user’s cell phone via Bluetooth and allows users to text
+      each other, within a 5 to 8 mile radius, without being connected to a
+      cellular network.
+    </p>
+  </div>
+</div>
+<!--footer-->
+<div class="footer">
+  <p>Privacy & Terms</p>
+  <p>Contact Us</p>
+  <p>Change Region</p>
+</div>

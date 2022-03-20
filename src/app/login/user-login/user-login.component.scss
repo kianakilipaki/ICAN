@@ -1,0 +1,15 @@
+@import "/src/app/login/login.component.scss";
+
+#user-login {
+  width: 200px;
+  margin: 0 auto;
+
+  label {
+    display: block;
+    margin-bottom: 1em;
+    text-align: left;
+  }
+  .continue-btn {
+    margin: 1em 0;
+  }
+}

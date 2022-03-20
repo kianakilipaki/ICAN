@@ -1,0 +1,53 @@
+@import "/src/app/shared/shared.scss";
+
+.search input {
+  width: 500px;
+  margin: 10px;
+}
+
+.table {
+  margin: 0px 10px;
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 1px 3px 5px $gray;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+
+.table td,
+.table th {
+  border-style: solid;
+  border-width: 1px 0 0;
+  border-color: $gray-light;
+  display: table-cell;
+  font-size: 14px;
+  line-height: 20px;
+  overflow: hidden;
+  padding: 8px 21px;
+  white-space: nowrap;
+  width: auto;
+  text-align: left;
+}
+
+.table th {
+  border-bottom: solid 1px $black;
+}
+
+.form {
+  margin: 1em;
+}
+
+.form input {
+  border: 1px solid $gray;
+  display: block;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+.btn,
+input.btn {
+  background-color: $blue;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 3px 0px 5px $gray;
+}

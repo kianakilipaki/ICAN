@@ -2,9 +2,90 @@
 <h3 class="header">Members</h3>
 
 <!-- search members -->
+<span class="search"
+  ><label for="search">
+    <input
+      type="text"
+      placeholder="Search Members"
+      (input)="onSearch($event)" /></label
+></span>
 
 <!-- add new members -->
-
+<div class="form">
+  <button
+    class="btn"
+    *ngIf="!openform"
+    (click)="onClickOpenForm()"
+    value="newMember"
+  >
+    Add New Member
+  </button>
+  <div *ngIf="openform">
+    <form #form="ngForm">
+      Name:
+      <input
+        required
+        type="text"
+        name="name"
+        placeholder="Members Full Name"
+        formControlName="name"
+      />
+      <br />
+      Position:
+      <input
+        type="text"
+        name="position"
+        placeholder="ex. Secretary"
+        formControlName="position"
+      />
+      <br />
+      Groups:
+      <input
+        type="text"
+        name="groups"
+        placeholder="ex. leadership, ICE"
+        formControlName="groups"
+      />
+      <br />
+      Email:
+      <input
+        type="email"
+        name="email"
+        placeholder="abc@gmail.com"
+        formControlName="email"
+        required
+      />
+      <br />
+      is Leader:
+      <input type="checkbox" name="isLeader" formControlName="isLeader" />
+      <br />
+      <input
+        type="button"
+        class="btn forsubmit"
+        value="Send Invite"
+        (click)="onClickSubmitForm(form.value)"
+      />
+    </form>
+  </div>
+</div>
 <!-- sort members -->
 
 <!-- members list -->
+<table class="table">
+  <tr>
+    <th><input type="checkbox" /></th>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Groups</th>
+    <th>Accepted</th>
+    <th>Is Leader</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td><input type="checkbox" /></td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.position }}</td>
+    <td>{{ item.groups }}</td>
+    <td>{{ item.accepted }}</td>
+    <td>{{ item.isLeader }}</td>
+  </tr>
+</table>

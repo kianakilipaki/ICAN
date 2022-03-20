@@ -1,6 +1,15 @@
-<br />
-<label
-  >Username:
-  <input type="text" placeholder="Enter Username" [(ngModel)]="username"
-/></label>
-<button [disabled]="username === ''" routerLink="/main">Login</button>
+<!--Logo-->
+<div class="container">
+  <img class="logo" src="/assets/logo.svg" alt="logo" />
+
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+
+  <!--footer-->
+  <div class="footer">
+    <p>Privacy & Terms</p>
+    <p>Contact Us</p>
+    <p>Change Region</p>
+  </div>
+</div>

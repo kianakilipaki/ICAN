@@ -1,1 +1,84 @@
-<p>reports works!</p>
+<!-- Reports page -->
+<h3 class="header">Reports</h3>
+
+<!-- search reports -->
+<span class="search"
+  ><label for="search">
+    <input
+      type="text"
+      placeholder="Search Reports"
+      (input)="onSearch($event)" /></label
+></span>
+
+<!-- add new form/report -->
+<div class="form">
+  <button
+    class="btn"
+    *ngIf="!openform"
+    (click)="onClickOpenForm()"
+    value="newForm"
+  >
+    Add New Report
+  </button>
+  <div *ngIf="openform">
+    <form #newForm="ngForm">
+      Form Name:
+      <input type="text" name="name" placeholder="ex. Wellness Check" ngModel />
+      <br />
+      Question:
+      <input type="text" name="question" placeholder="ex. How are you?" />
+      <br />
+      Type:
+      <input type="radio" name="type" value="Yes/No" ngModel />
+      <label for="Yes/No">Yes/No</label><br />
+      <input type="radio" name="type" value="Multiple" ngModel />
+      <label for="Multiple">Multiple</label><br />
+      <input type="radio" name="type" value="number" ngModel />
+      <label for="number">Number</label>
+      <br />
+      Options:
+      <input
+        type="text"
+        name="options"
+        placeholder="ex. Good, Okay, Bad"
+        ngModel
+        required
+      />
+      <input
+        type="button"
+        class="btn"
+        value="Add Another Question"
+        (click)="addQuestion()"
+      />
+      <br />
+      <input
+        type="submit"
+        class="btn forsubmit"
+        value="Create Form"
+        (click)="onClickSubmitForm(newForm.value)"
+      />
+    </form>
+  </div>
+</div>
+
+<!-- sort Forms -->
+
+<!-- Reports list -->
+<table class="table">
+  <tr>
+    <th><input type="checkbox" /></th>
+    <th>Name</th>
+    <th>Date Added</th>
+    <th>Last Modified</th>
+    <th>Responses</th>
+    <th>Percent</th>
+  </tr>
+  <tr *ngFor="let item of items">
+    <td><input type="checkbox" /></td>
+    <td>{{ item.name }}</td>
+    <td>{{ item.date }}</td>
+    <td>{{ item.modified }}</td>
+    <td>{{ item.responses }}</td>
+    <td>{{ item.percent }}</td>
+  </tr>
+</table>

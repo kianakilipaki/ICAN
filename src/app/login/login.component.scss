@@ -1,0 +1,60 @@
+@import "/src/app/shared/shared.scss";
+
+.container {
+  background: linear-gradient(#f5f5f5, #98b0be, #446a80);
+  height: 100vh;
+  text-align: center;
+  padding-top: 20vh;
+  .logo {
+    width: 150px;
+  }
+}
+p {
+  font-size: 1.2em;
+}
+input {
+  padding: 0.3em;
+  width: 200px;
+  border-radius: 3px;
+  font-style: italic;
+  border: none;
+}
+.continue-btn {
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.3em;
+  width: 200px;
+  color: $white;
+  background-color: $black;
+  border: none;
+  border-radius: 20px;
+}
+.continue-btn:hover {
+  background-color: $red;
+}
+.continue-btn:active {
+  background-color: $gray;
+}
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  bottom: 1em;
+  left: 50vw;
+  transform: translateX(-50%);
+  p {
+    font-size: 0.8em;
+    margin: 2em;
+  }
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: $red;
+}
+a:active {
+  color: $white;
+}
