@@ -1,0 +1,42 @@
+<h3 class="header">Fill Out Form</h3>
+
+<form class="form" #form="ngForm">
+  <h4>{{ f.name }}</h4>
+  <br />
+  <div class="inner-container" *ngFor="let q of f.content; let i = index">
+    {{ i + 1 }}. {{ q.question }}
+    <select *ngIf="q.type == 'select'">
+      <option *ngFor="let o of q.options" value="{{ o }}">{{ o }}</option>
+    </select>
+
+    <div *ngIf="q.type == 'radio'">
+      <div *ngFor="let o of q.options">
+        <input class="check" type="radio" name="options" value="{{ o }}" />{{
+          o
+        }}
+      </div>
+    </div>
+
+    <div *ngIf="q.type == 'checkbox'">
+      <div *ngFor="let o of q.options">
+        <input class="check" type="checkbox" name="options" value="{{ o }}" />{{
+          o
+        }}
+      </div>
+    </div>
+
+    <input *ngIf="q.type == 'text'" type="text" />
+
+    <input *ngIf="q.type == 'number'" type="number" value="0" />
+
+    <input *ngIf="q.type == 'date'" type="date" />
+  </div>
+  <br />
+  <button
+    class="btn forsubmit"
+    (click)="onClickSubmit(form.value)"
+    routerLink="./forms"
+  >
+    Submit
+  </button>
+</form>

@@ -18,6 +18,10 @@ import { MessagesComponent } from './main/pages/messages/messages.component';
 import { SettingsComponent } from './main/pages/settings/settings.component';
 import { MembersComponent } from './main/pages/members/members.component';
 import { ReportsComponent } from './main/pages/reports/reports.component';
+import { NewFormComponent } from './main/pages/reports/new-form/new-form.component';
+import { OpenFormComponent } from './main/pages/forms/open-form/open-form.component';
+import { OpenReportComponent } from './main/pages/reports/open-report/open-report.component';
+import { RoomListComponent } from './main/pages/messages/room-list/room-list.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { ReportsComponent } from './main/pages/reports/reports.component';
     MembersComponent,
     ReportsComponent,
     OrgLoginComponent,
-    UserLoginComponent
+    UserLoginComponent,
+    NewFormComponent,
+    OpenFormComponent,
+    OpenReportComponent,
+    RoomListComponent
   ],
   imports: [
     BrowserModule,

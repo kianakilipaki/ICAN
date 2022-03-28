@@ -33,21 +33,16 @@
   border-bottom: solid 1px $black;
 }
 
-.form {
-  margin: 1em;
-}
-
-.form input {
-  border: 1px solid $gray;
-  display: block;
-  border-radius: 5px;
-  padding: 0.5em 1em;
-}
-.btn,
-input.btn {
+.btn {
   background-color: $blue;
   border: none;
   padding: 0.5em;
   border-radius: 5px;
   box-shadow: 3px 0px 5px $gray;
+}
+.btn:hover {
+  background-color: $gray;
+}
+.btn:active {
+  background-color: $white;
 }

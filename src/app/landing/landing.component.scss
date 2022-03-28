@@ -25,6 +25,7 @@ header {
   flex-direction: row;
   align-items: flex-end;
   gap: 3em;
+  border-bottom: 1px solid $gray;
   nav a {
     font-weight: 500;
     font-size: 1.2em;
@@ -93,7 +94,7 @@ header {
   }
 }
 #about {
-  margin: 4em 0;
+  margin: 4em;
   background-color: $gray-light;
   border-radius: 20px;
   padding: 5em;
@@ -109,13 +110,22 @@ header {
   }
 }
 #tech {
+  position: relative;
   padding: 5em 0;
   p {
-    margin: 1em 0;
+    margin: 3em 0;
     width: 50%;
+    float: left;
+  }
+  img {
+    width: 250px;
+    position: absolute;
+    top: 3em;
+    right: 15em;
   }
 }
 .footer {
+  clear: both;
   background-color: $blue;
   display: flex;
   flex-wrap: wrap;

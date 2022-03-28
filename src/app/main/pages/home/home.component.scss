@@ -29,7 +29,7 @@
   padding: 30px 40px;
   border-radius: 10px;
   box-shadow: 1px 1px 4px $gray;
-  margin: 20px 50px;
+  margin: 10px;
   h2 {
     color: $red;
     margin: 10px 0;
@@ -41,4 +41,14 @@
   p {
     margin: 20px 0;
   }
+}
+form {
+  margin: 20px 10px;
+}
+textarea {
+  padding: 1em;
+  border: 1px solid $gray;
+  border-radius: 10px;
+  width: 90%;
+  height: 8em;
 }

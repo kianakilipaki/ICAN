@@ -30,10 +30,13 @@ export class MembersComponent implements OnInit {
     var search = event.target.value;
     this.items = this.dm.executeLocal(new Query().search(search, ['name'] || ['position'] || ['groups']).take(15));
   }
+  
+   onSort(sort: string, dir: string) {
+    this.items = this.dm.executeLocal(new Query().sortBy(sort, dir).take(15));
+  }
 
   onClickOpenForm(){
     this.openform = true;
-    this.newMember;
   }
 
   onClickSubmitForm(formdata: any) {

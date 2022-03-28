@@ -1,0 +1,53 @@
+<!-- New Form page -->
+<a routerLink="../../reports">Back</a>
+<h3 class="header">Create New Form</h3>
+
+<form class="form" #newForm="ngForm">
+  Form Name:
+  <input
+    type="text"
+    class="name"
+    name="name"
+    placeholder="ex. Wellness Check"
+    ngModel
+  />
+  <br />
+  <div *ngFor="let click of clicks; let i = index">
+    <a (click)="removeQuestion(i)" id=""><b>X</b></a
+    ><br />
+    Question {{ i + 1 }}:
+    <input type="text" name="question" placeholder="ex. How are you?" />
+    Type of Response:
+    <select id="type">
+      <option value="checkbox">Multiple Choices</option>
+      <option value="radio">Choice</option>
+      <option value="select">DropDown</option>
+      <option value="number">Number</option>
+      <option value="date">Date</option>
+      <option value="text">Short Answer</option>
+    </select>
+    Options:
+    <input
+      type="text"
+      name="options"
+      placeholder="ex. Good, Okay, Bad"
+      ngModel
+      required
+    />
+  </div>
+  <br />
+  <input
+    type="button"
+    class="add"
+    value="+ Add Another Question"
+    (click)="addQuestion()"
+  />
+  <br />
+  <button
+    class="btn forsubmit"
+    (click)="onClickSubmitForm(newForm.value)"
+    routerLink="reports"
+  >
+    Create Form
+  </button>
+</form>

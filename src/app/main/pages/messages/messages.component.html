@@ -1,12 +1,34 @@
-<!-- Chat name -->
-<h4>Open Chatroom</h4>
-<!-- Invite to chat -->
-<input type="text" placeholder="Add to Chat" />
-<!-- users in chat -->
-<ul>
-  <li></li>
-</ul>
-<!-- chat content -->
-
-<!-- chat input -->
-<input class="end" type="textbox" placeholder="Start typing..." />
+<!-- Open new chat -->
+<div *ngIf="!openChat">
+  <h3>Your Chatrooms</h3>
+  <app-room-list></app-room-list>
+</div>
+<!-- Open existing chat -->
+<div id="container" *ngIf="openChat">
+  <div id="header">
+    <h4 class="start">{{ info.name }}</h4>
+    <div *ngFor="let m of info.users">
+      <img class="pic" src="{{ m.pic }}" alt="pic" />
+    </div>
+    <a (click)="add = !add" *ngIf="!add"
+      ><img class="icon" src="assets/ect/add-outline.svg" alt="+"
+    /></a>
+    <input *ngIf="add" type="text" placeholder="Add to Chat" />
+  </div>
+  <!-- chat content -->
+  <div id="content-container">
+    <div *ngFor="let c of info.chats">
+      <img class="pic" src="{{ c.pic }}" alt="pic" />
+      <h4>
+        {{ c.user }} <i>- {{ c.date }}</i>
+      </h4>
+      <p>{{ c.message }}</p>
+      <hr />
+    </div>
+  </div>
+  <!-- chat input -->
+  <div id="text">
+    <button class="btn" (click)="sendMessage(message.value)">Send</button>
+    <textarea id="txt" #message placeholder="Start typing..."></textarea>
+  </div>
+</div>

@@ -7,7 +7,9 @@
     <img class="pic" src="{{ profile.pic }}" alt="profile pic" />
     <p>{{ profile.name }}</p>
     <p>{{ profile.title }}</p>
-    <a href=""><img class="icon" src="assets/ect/chat.svg" alt="chat" /></a>
+    <a (click)="GoToChat(profile.name)"
+      ><img class="icon" src="assets/ect/chat.svg" alt="chat"
+    /></a>
   </div>
   <hr />
 </div>

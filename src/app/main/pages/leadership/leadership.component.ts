@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-leadership',
@@ -11,5 +12,11 @@ export class LeadershipComponent {
   profile2 = { isPrimary: false, name: "Sarah Smith", relation:"Spouse", pic: "/assets/ect/profile.svg", title: "Member", email:"sarahsmith@gmail.com", phone:"(203)123-1234", address:"something st Orem, UT 22883" };
   profiles = [this.profile, this.profile2];
   group1 = { name: "Ward Council", members: this.profiles };
-  groups = [this.group1, this.group1]
+  groups = [this.group1, this.group1];
+  
+  constructor(private router: Router) { }
+  
+  GoToChat(name: string) {
+    this.router.navigate(["main/messages"], { state: { data: name } });
+  }
 }

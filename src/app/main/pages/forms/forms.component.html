@@ -21,7 +21,7 @@
 <h4>Completed</h4>
 <div *ngIf="toDos">
   <ul class="to-do" *ngFor="let item of toDos">
-    <li id="{{ item.id }}">
+    <li id="{{ item.id }}" routerLink="openForm">
       {{ item.title }}
       <p>{{ item.date }}</p>
       <span>Edit</span>

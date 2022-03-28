@@ -15,6 +15,7 @@ $gray-light: #e4e4e4;
 $gray: #c9c9c9;
 $gray-filter: invert(99%) sepia(11%) saturate(0%) hue-rotate(177deg)
   brightness(83%) contrast(88%);
+$prettyColors: linear-gradient(#f5f5f5, #98b0be, #446a80);
 
 body {
   background-color: $white;
@@ -24,7 +25,11 @@ body {
 body,
 h2,
 h4,
-h6 {
+h6,
+p,
+input,
+textarea,
+select {
   font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
     "Helvetica Neue", Arial, sans-serif;
   color: $black;
@@ -64,6 +69,9 @@ p {
   width: 1em;
   margin: 0px 10px;
 }
+a {
+  text-decoration: none;
+}
 a:hover {
   color: $red;
   .icon {
@@ -85,14 +93,13 @@ a:active {
 
 //buttons
 .addNew {
-  background-color: $gray-light;
+  background-color: $blue;
   box-shadow: 1px 1px 4px $gray;
-  padding: 30px 40px;
+  padding: 20px;
   border-radius: 10px;
-  margin: 10px 50px;
-  width: 300px;
+  margin: 10px;
   img {
-    float: right;
+    margin-bottom: -3px;
     filter: $black-filter;
   }
 }
@@ -115,4 +122,54 @@ a:active {
     filter: $gray-filter;
     color: $red;
   }
+}
+
+// forms
+.form {
+  max-width: 900px;
+  position: relative;
+  background-color: #fff;
+  padding: 2em;
+  box-shadow: 1px 2px 5px $gray;
+  border-radius: 10px;
+  input,
+  select {
+    display: block;
+    margin: 0.5em 0 1em 0;
+    padding: 0.5em;
+    border: 1px solid $gray;
+    border-radius: 3px;
+    width: 50%;
+    max-width: 300px;
+  }
+  .check {
+    display: inline;
+    width: 2em !important;
+  }
+  .btn {
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    background-color: $black;
+    color: $white;
+    border: none;
+    padding: 0.5em 2em;
+    border-radius: 7px;
+  }
+  .btn:hover {
+    background-color: $gray;
+  }
+  .btn:active {
+    background-color: $white;
+  }
+}
+
+.pic {
+  background-color: $blue;
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+  border-radius: 100%;
+  float: left;
+  margin-right: 1em;
 }

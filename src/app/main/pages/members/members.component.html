@@ -2,7 +2,7 @@
 <h3 class="header">Members</h3>
 
 <!-- search members -->
-<span class="search"
+<span class="search" *ngIf="!openform"
   ><label for="search">
     <input
       type="text"
@@ -11,74 +11,44 @@
 ></span>
 
 <!-- add new members -->
-<div class="form">
-  <button
-    class="btn"
-    *ngIf="!openform"
-    (click)="onClickOpenForm()"
-    value="newMember"
-  >
+
+<div *ngIf="!openform">
+  <button class="btn" (click)="onClickOpenForm()" value="newMember">
     Add New Member
   </button>
-  <div *ngIf="openform">
-    <form #form="ngForm">
-      Name:
-      <input
-        required
-        type="text"
-        name="name"
-        placeholder="Members Full Name"
-        formControlName="name"
-      />
-      <br />
-      Position:
-      <input
-        type="text"
-        name="position"
-        placeholder="ex. Secretary"
-        formControlName="position"
-      />
-      <br />
-      Groups:
-      <input
-        type="text"
-        name="groups"
-        placeholder="ex. leadership, ICE"
-        formControlName="groups"
-      />
-      <br />
-      Email:
-      <input
-        type="email"
-        name="email"
-        placeholder="abc@gmail.com"
-        formControlName="email"
-        required
-      />
-      <br />
-      is Leader:
-      <input type="checkbox" name="isLeader" formControlName="isLeader" />
-      <br />
-      <input
-        type="button"
-        class="btn forsubmit"
-        value="Send Invite"
-        (click)="onClickSubmitForm(form.value)"
-      />
-    </form>
-  </div>
 </div>
-<!-- sort members -->
+<div *ngIf="openform">
+  <form class="form" #form="ngForm">
+    Name:
+    <input required type="text" name="name" placeholder="Members Full Name" />
+    <br />
+    Position:
+    <input type="text" name="position" placeholder="ex. Secretary" />
+    <br />
+    Groups:
+    <input type="text" name="groups" placeholder="ex. leadership, ICE" />
+    <br />
+    Email:
+    <input type="email" name="email" placeholder="abc@gmail.com" required />
+    <br />
+    is Leader:<input class="check" type="checkbox" name="isLeader" />
+
+    <br />
+    <button type="button" class="btn" (click)="onClickSubmitForm(form.value)">
+      Send Invite
+    </button>
+  </form>
+</div>
 
 <!-- members list -->
-<table class="table">
+<table class="table" *ngIf="!openform">
   <tr>
-    <th><input type="checkbox" /></th>
-    <th>Name</th>
-    <th>Position</th>
-    <th>Groups</th>
-    <th>Accepted</th>
-    <th>Is Leader</th>
+    <th></th>
+    <th (click)="onSort('name', 'ascending')">&#9660; Name</th>
+    <th (click)="onSort('position', 'ascending')">&#9660; Position</th>
+    <th (click)="onSort('groups', 'ascending')">&#9660; Groups</th>
+    <th (click)="onSort('accepted', 'ascending')">&#9660; Accepted</th>
+    <th (click)="onSort('isLeader', 'ascending')">&#9660; Is Leader</th>
   </tr>
   <tr *ngFor="let item of items">
     <td><input type="checkbox" /></td>

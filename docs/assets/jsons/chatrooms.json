@@ -1,0 +1,66 @@
+{
+    "chatrooms": [
+        {
+            "id": 0,
+            "name": "New Chatroom",
+            "users": [],
+            "chats": []
+        },
+        {
+            "id": 3,
+            "name": "Awesome Group",
+            "users": [
+                {
+                    "pic": "assets/ect/pic.jpg",
+                    "name": "Alan Smith"
+                },
+                {
+                    "pic": "assets/ect/profile.svg",
+                    "name": "Walter Guy"
+                }
+            ],
+            "chats": [
+                {
+                    "pic": "assets/ect/pic.jpg",
+                    "user": "Alan Smith",
+                    "date": "3/26/22 7:16 pm",
+                    "message": "How are you?"
+                },
+                {
+                    "pic": "assets/ect/profile.svg",
+                    "user": "Walter Guy",
+                    "date": "3/26/22 7:18 pm",
+                    "message": "I am great :P"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "name": "Team Alpha",
+            "users": [
+                {
+                    "pic": "assets/ect/pic.jpg",
+                    "name": "Alan Smith"
+                },
+                {
+                    "pic": "assets/ect/profile.svg",
+                    "name": "Walter Guy"
+                }
+            ],
+            "chats": [
+                {
+                    "pic": "assets/ect/pic.jpg",
+                    "user": "Alan Smith",
+                    "date": "3/26/22 7:16 pm",
+                    "message": "How are you?"
+                },
+                {
+                    "pic": "assets/ect/profile.svg",
+                    "user": "Walter Guy",
+                    "date": "3/26/22 7:18 pm",
+                    "message": "I am great :P"
+                }
+            ]
+        }
+    ]
+}

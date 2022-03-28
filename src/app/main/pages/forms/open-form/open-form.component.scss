@@ -1,0 +1,12 @@
+@import "/src/app/shared/shared.scss";
+
+h4 {
+  background-color: $gray-light;
+  font-weight: 400;
+  padding: 1.5em 2em;
+  margin: -2em;
+  border-radius: 10px 10px 0 0;
+}
+.inner-container {
+  margin: 2em;
+}

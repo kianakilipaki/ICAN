@@ -6,29 +6,25 @@
   display: flex;
   div {
     position: relative;
-  }
-  .end {
-    position: absolute;
-    bottom: 0px;
-  }
-  #menu-btn {
-    position: absolute;
-    z-index: 10;
-    top: 10px;
-    right: -10px;
-    width: 25px;
-    height: 25px;
-    border: none;
-    transform: rotate(45deg);
-    background-color: $gray;
+    #menu-btn {
+      position: absolute;
+      z-index: 10;
+      top: 10px;
+      right: -10px;
+      width: 25px;
+      height: 25px;
+      border: none;
+      transform: rotate(45deg);
+      background-color: $gray;
+    }
   }
 
   //open and close menu
   .open {
-    width: 250px;
-    transition: all 0.5s;
+    width: 15em;
+    transition: width 0.5s;
     a {
-      padding: 25px;
+      padding: 1.2em 2em;
     }
     .hide {
       display: initial;
@@ -36,10 +32,10 @@
     }
   }
   .close {
-    width: 50px;
-    transition: all 0.5s;
+    width: 3em;
+    transition: width 0.5s;
     a {
-      padding: 20px 5px;
+      padding: 1.5em 0.4em;
     }
     .hide {
       display: none;
@@ -48,46 +44,42 @@
   }
 
   #main-nav {
-    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    background: linear-gradient(#f5f5f5, #98b0be, #446a80);
+    background: $prettyColors;
     box-shadow: 3px 0px 5px $gray;
-    h1 {
-      padding: 30px;
-    }
 
     .profile-snippet {
-      img {
+      margin-top: auto;
+      width: 100%;
+      background-color: $black;
+      padding: 20px;
+      .pic {
         width: 50px;
         height: 50px;
-        object-fit: cover;
-        border-radius: 100%;
-        float: left;
-        margin-right: 1em;
       }
       h3,
       h4 {
         color: $white;
       }
-      width: 100%;
-      background-color: $black;
-      padding: 20px;
     }
   }
 
   #logout-nav {
-    padding: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
     height: 100%;
     background-color: $gray;
+    .end {
+      margin-top: auto;
+    }
   }
 
-  nav h1 {
-    font-size: 1.5em;
-    padding: 30px;
-  }
   nav {
-    li {
-      list-style: none;
+    h1 {
+      font-size: 1.5em;
+      padding: 30px;
     }
     a {
       display: block;
@@ -119,6 +111,83 @@
       color: $red;
       font-weight: 700;
       .icon {
+        filter: $red-filter;
+      }
+    }
+  }
+
+  .small {
+    display: none;
+  }
+}
+#menu-small {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  #menu {
+    display: none;
+  }
+  #menu-small {
+    display: initial;
+    position: relative;
+    z-index: 10;
+    .menu-bar {
+      position: fixed;
+      top: 0;
+      width: 2m;
+      margin: 1em;
+      background-color: $white;
+      padding: 0.5em;
+      border-radius: 20px;
+    }
+    .x {
+      position: absolute;
+      top: 2em;
+      right: 2em;
+      transform: rotate(45deg);
+      width: 1.5em;
+      filter: $black-filter;
+    }
+    .x:hover {
+      filter: $red-filter;
+    }
+    #logout-nav-small {
+      padding: 1em;
+      z-index: 10;
+      width: 100vw;
+      height: 100vh;
+      background: linear-gradient(#f5f5f5, #98b0be, #446a80);
+      position: fixed;
+
+      nav a {
+        display: block;
+        padding: 2em;
+      }
+    }
+    .open {
+      display: initial;
+      z-index: 11;
+      height: 100vh;
+      animation: fadeIn 0.5s linear forwards;
+    }
+    .close {
+      display: none;
+      height: 0px;
+      animation: fadeIn 0.5s linear forwards;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: space-around;
+      padding: 1em;
+      width: 100vw;
+      position: fixed;
+      bottom: 0;
+      background-color: $black;
+      a {
+        filter: $white-filter;
+      }
+      a:hover {
         filter: $red-filter;
       }
     }

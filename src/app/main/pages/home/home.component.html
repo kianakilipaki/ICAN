@@ -8,12 +8,11 @@
 <h3 class="header">To do</h3>
 <div *ngIf="toDos">
   <ul class="to-do" *ngFor="let item of toDos">
-    <li>
-      {{ item.title }}
-      <a href=""
-        ><img class="icon" src="assets/ect/add-solid.svg" alt="add"
-      /></a>
-    </li>
+    <a routerLink="{{ item.link }}">
+      <li>
+        {{ item.title }}
+        <img class="icon" src="assets/ect/add-solid.svg" alt="add" /></li
+    ></a>
   </ul>
 </div>
 <div *ngIf="!toDos">
@@ -25,25 +24,55 @@
 <div *ngIf="announcements">
   <div class="announcements" *ngFor="let item of announcements">
     <div *ngIf="isAdmin">
-      <a href=""
+      <a (click)="edit = !edit"
         ><img class="edit-icon icon" src="assets/ect/pencil.svg" alt="edit"
       /></a>
     </div>
-
-    <h2>{{ item.title }}</h2>
-    <h4>
-      {{ item.date }} <i> Posted by {{ item.user }}</i>
-    </h4>
-    <p>{{ item.content }}</p>
+    <div *ngIf="!edit">
+      <h2>{{ item.title }}</h2>
+      <h4>
+        {{ item.date }} <i> Posted by {{ item.user }}</i>
+      </h4>
+      <p>{{ item.content }}</p>
+    </div>
+    <div *ngIf="edit">
+      <form class="form">
+        <input type="text" value="{{ item.title }}" />
+        <h4>
+          {{ item.date }} <i> Posted by {{ item.user }}</i>
+        </h4>
+        <textarea>{{ item.content }}</textarea>
+        <button
+          class="btn"
+          (click)="editAnn(item.content, item.title, item.id); edit = !edit"
+        >
+          Save
+        </button>
+      </form>
+    </div>
   </div>
 </div>
 <div *ngIf="!announcements">
   <p><i>No new announcements</i></p>
 </div>
-<div *ngIf="isAdmin">
-  <h4 class="addNew">
-    Add new Announcement<a href=""
-      ><img class="icon" src="assets/ect/add-outline.svg" alt="add"
-    /></a>
+<div *ngIf="isAdmin" (click)="newAnn = !newAnn">
+  <h4 class="addNew" *ngIf="!newAnn">
+    <img class="icon" src="assets/ect/add-outline.svg" alt="add" />Add new
+    Announcement
   </h4>
+</div>
+
+<div *ngIf="newAnn">
+  <form class="form">
+    Header:
+    <input type="text" #title placeholder="ex. Important Announcement" />
+    <textarea name="ann" #ann id="ann" placeholder="Start typing..."></textarea>
+    <button
+      class="btn"
+      (click)="addAnn(ann.value, title.value)"
+      (click)="newAnn = !newAnn"
+    >
+      Add
+    </button>
+  </form>
 </div>

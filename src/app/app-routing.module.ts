@@ -13,6 +13,8 @@ import { MessagesComponent } from './main/pages/messages/messages.component';
 import { ProfileComponent } from './main/pages/profile/profile.component';
 import { SettingsComponent } from './main/pages/settings/settings.component';
 import { ReportsComponent } from './main/pages/reports/reports.component';
+import { NewFormComponent } from './main/pages/reports/new-form/new-form.component';
+import { OpenFormComponent } from './main/pages/forms/open-form/open-form.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -33,18 +35,21 @@ const routes: Routes = [
       { path: 'home', component: HomeComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'forms', component: FormsComponent },
+      { path: 'forms/openForm', component: OpenFormComponent},
       { path: 'leadership', component: LeadershipComponent },
-      { path: 'messages', component: MessagesComponent },
+      { path: 'messages/:id', component: MessagesComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'members', component: MembersComponent },
       { path: 'reports', component: ReportsComponent },
+      { path: 'reports/newForm', component: NewFormComponent },
+      { path: 'reports/openReport', component: NewFormComponent },
       { path: 'logout',   redirectTo: '/login', pathMatch: 'full' },
-    ]
+    ],
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
