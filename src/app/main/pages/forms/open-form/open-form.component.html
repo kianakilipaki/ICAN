@@ -11,17 +11,23 @@
 
     <div *ngIf="q.type == 'radio'">
       <div *ngFor="let o of q.options">
-        <input class="check" type="radio" name="options" value="{{ o }}" />{{
-          o
-        }}
+        <input
+          class="check"
+          type="radio"
+          name="options{{ i }}"
+          value="{{ o }}"
+        />{{ o }}
       </div>
     </div>
 
     <div *ngIf="q.type == 'checkbox'">
       <div *ngFor="let o of q.options">
-        <input class="check" type="checkbox" name="options" value="{{ o }}" />{{
-          o
-        }}
+        <input
+          class="check"
+          type="checkbox"
+          name="options{{ i }}"
+          value="{{ o }}"
+        />{{ o }}
       </div>
     </div>
 
@@ -30,6 +36,8 @@
     <input *ngIf="q.type == 'number'" type="number" value="0" />
 
     <input *ngIf="q.type == 'date'" type="date" />
+
+    <textarea *ngIf="q.type == 'textarea'" name=""></textarea>
   </div>
   <br />
   <button

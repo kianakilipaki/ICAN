@@ -16,7 +16,7 @@ export class HomeComponent {
   // list objects -- placeholders
   item1 = { title: "Invite members", link:"../members" };
   item2 = { title: "Complete Profile", link: "../profile" };
-  item3 = { title: "Wellness Check Survey", link:"../forms" };
+  item3 = { title: "Wellness Check", link:"../forms" };
   toDos = [this.item1, this.item2, this.item3];
 
   // announcements list objects -- placeholders

@@ -136,3 +136,34 @@ header {
     margin: 2em;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .landing {
+    margin: 0;
+    padding: 1em;
+    padding-top: 10em;
+    width: 100%;
+  }
+  .hide {
+    display: none;
+  }
+  img {
+    position: initial !important;
+    width: 100%;
+  }
+  #phone {
+    width: 20%;
+  }
+  header {
+    margin: -1em;
+    padding: 1em;
+    width: 100%;
+  }
+  #about,
+  #about p,
+  #tech p {
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+  }
+}

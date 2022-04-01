@@ -35,7 +35,21 @@
 </div>
 
 <!-- Add new profile -->
-<h4 class="addNew">
-  Add new profile
-  <a href=""><img class="icon" src="assets/ect/add-outline.svg" alt="add" /></a>
-</h4>
+<h5 class="addNew" *ngIf="!open">
+  <a (click)="addProfile(); open = !open">
+    <img class="icon" src="assets/ect/add-outline.svg" alt="add" />Add new
+    profile</a
+  >
+</h5>
+<form *ngIf="open" #form class="form">
+  <h5>Add New Household Member</h5>
+  Upload Profile Pic <input type="file" /><br />
+  Name <input type="text" /> Position
+  <input type="text" />
+  <br />
+  Relation <input type="text" />
+  <h5>Contact Information</h5>
+  Email <input type="email" /> Phone <input type="text" /> Address
+  <input type="text" />
+  <button class="btn" (click)="saveProfile(form)">Add Profile</button>
+</form>

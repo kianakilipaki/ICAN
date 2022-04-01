@@ -15,6 +15,7 @@ import { SettingsComponent } from './main/pages/settings/settings.component';
 import { ReportsComponent } from './main/pages/reports/reports.component';
 import { NewFormComponent } from './main/pages/reports/new-form/new-form.component';
 import { OpenFormComponent } from './main/pages/forms/open-form/open-form.component';
+import { OpenReportComponent } from './main/pages/reports/open-report/open-report.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -31,19 +32,19 @@ const routes: Routes = [
     path: 'main',
     component: MainComponent,
     children: [
-      { path: '', component: HomeComponent },
+      { path: '', redirectTo: '/main/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
       { path: 'profile', component: ProfileComponent },
       { path: 'forms', component: FormsComponent },
-      { path: 'forms/openForm', component: OpenFormComponent},
+      { path: 'forms/openForm/:id', component: OpenFormComponent},
       { path: 'leadership', component: LeadershipComponent },
       { path: 'messages/:id', component: MessagesComponent },
       { path: 'settings', component: SettingsComponent },
       { path: 'members', component: MembersComponent },
       { path: 'reports', component: ReportsComponent },
       { path: 'reports/newForm', component: NewFormComponent },
-      { path: 'reports/openReport', component: NewFormComponent },
-      { path: 'logout',   redirectTo: '/login', pathMatch: 'full' },
+      { path: 'reports/openReport/:id', component: OpenReportComponent },
+      { path: 'logout', redirectTo: '/', pathMatch: 'full' },
     ],
   },
 ];

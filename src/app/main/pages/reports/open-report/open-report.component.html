@@ -1,0 +1,65 @@
+<!-- view report page -->
+<a routerLink="../../../reports">Back</a>
+<h3 class="header">View Report</h3>
+
+<div id="report-container" *ngIf="!reportExists">
+  <p>This form has no responses.</p>
+</div>
+<div id="report-container" *ngIf="reportExists">
+  <h2>{{ form[0].name }} Results</h2>
+  <div
+    *ngFor="let q of form[0].content; let i = index"
+    id="q{{ i }}"
+    class="closed"
+  >
+    <p (click)="openQ(i)">
+      <img src="assets/ect/lil-arrow.svg" alt="" /> {{ i + 1 }}.
+      {{ q.question }}
+    </p>
+    <div>
+      <table *ngIf="q.options.length <= 0">
+        <tr>
+          <th>Name</th>
+          <th>Response</th>
+        </tr>
+        <tr *ngFor="let r of report">
+          <td>
+            {{ r.user }}
+          </td>
+          <td>{{ r.responses[i] }}</td>
+        </tr>
+        <tr>
+          <td><b> Total Responses</b></td>
+          <td>{{ report.length }}</td>
+        </tr>
+      </table>
+      <table *ngIf="q.options.length > 0">
+        <tr>
+          <th>Choices</th>
+          <th>Responses</th>
+        </tr>
+
+        <tr
+          *ngFor="let o of q.options; let j = index"
+          id="{{ o }}{{ i }}{{ j }}"
+          class="closeO"
+          (click)="openO(o + i + j)"
+        >
+          <td>
+            <img src="assets/ect/lil-arrow.svg" alt="" /> {{ o }}
+            <div *ngFor="let r of report">
+              <span *ngIf="r.responses[i] == o">{{ r.user }}</span>
+            </div>
+          </td>
+          <td *ngIf="o == 'yes'">{{ Ycount }}</td>
+          <td *ngIf="o == 'no'">{{ Ncount }}</td>
+        </tr>
+
+        <tr>
+          <td><b>Total Responses</b></td>
+          <td>{{ report.length }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

@@ -3,32 +3,37 @@
         {
             "id": 0,
             "name": "New Chatroom",
-            "users": [],
+            "users": [
+                {
+                    "img": "assets/ect/pic.jpg",
+                    "name": "Alan Smith"
+                }
+            ],
             "chats": []
         },
         {
             "id": 3,
-            "name": "Awesome Group",
+            "name": "Team Alpha",
             "users": [
                 {
-                    "pic": "assets/ect/pic.jpg",
+                    "img": "assets/ect/pic.jpg",
                     "name": "Alan Smith"
                 },
                 {
-                    "pic": "assets/ect/profile.svg",
+                    "img": "assets/ect/profile.svg",
                     "name": "Walter Guy"
                 }
             ],
             "chats": [
                 {
-                    "pic": "assets/ect/pic.jpg",
-                    "user": "Alan Smith",
+                    "img": "assets/ect/pic.jpg",
+                    "name": "Alan Smith",
                     "date": "3/26/22 7:16 pm",
                     "message": "How are you?"
                 },
                 {
-                    "pic": "assets/ect/profile.svg",
-                    "user": "Walter Guy",
+                    "img": "assets/ect/profile.svg",
+                    "name": "Walter Guy",
                     "date": "3/26/22 7:18 pm",
                     "message": "I am great :P"
                 }
@@ -36,29 +41,39 @@
         },
         {
             "id": 1,
-            "name": "Team Alpha",
+            "name": "Awesome Group",
             "users": [
                 {
-                    "pic": "assets/ect/pic.jpg",
+                    "img": "assets/ect/pic.jpg",
                     "name": "Alan Smith"
                 },
                 {
-                    "pic": "assets/ect/profile.svg",
+                    "img": "assets/ect/profile.svg",
                     "name": "Walter Guy"
+                },
+                {
+                    "img": "assets/ect/profile.svg",
+                    "name": "Eric Schatz"
                 }
             ],
             "chats": [
                 {
-                    "pic": "assets/ect/pic.jpg",
-                    "user": "Alan Smith",
+                    "img": "assets/ect/pic.jpg",
+                    "name": "Alan Smith",
                     "date": "3/26/22 7:16 pm",
                     "message": "How are you?"
                 },
                 {
-                    "pic": "assets/ect/profile.svg",
-                    "user": "Walter Guy",
+                    "img": "assets/ect/profile.svg",
+                    "name": "Eric Schatz",
                     "date": "3/26/22 7:18 pm",
                     "message": "I am great :P"
+                },
+                {
+                    "img": "assets/ect/profile.svg",
+                    "name": "Walter Guy",
+                    "date": "3/26/22 7:18 pm",
+                    "message": "Super duper"
                 }
             ]
         }

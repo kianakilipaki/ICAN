@@ -34,15 +34,29 @@
   }
   .card-content {
     padding: 30px 120px;
-
-    h5 {
-      color: $red;
-      font-variant: small-caps;
-      margin: 20px 0 10px 0;
-    }
   }
 }
-
+h5 {
+  color: $red;
+  font-variant: small-caps;
+  margin: 20px 0 10px 0;
+}
 .addNew {
   margin: 100px;
+}
+
+@media only screen and (max-width: 900px) {
+  .profile {
+    margin: 5em 1em;
+
+    .card-head {
+      padding: 10em 0 2em 2em;
+    }
+    .card-content {
+      padding: 2em;
+    }
+  }
+  .addNew {
+    margin: 1em;
+  }
 }

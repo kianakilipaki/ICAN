@@ -2,5 +2,23 @@
 <h3 class="header">User Settings</h3>
 
 <!-- Edit username/password -->
+<form class="form">
+  <label for="email"
+    >Change your email<input type="text" value="{{ email }}"
+  /></label>
+  <label for="user"
+    >Change your username<input type="text" value="{{ user }}"
+  /></label>
+  <label for="pass"
+    >Change your Password<input type="password" value="{{ pass }}"
+  /></label>
+  <label for="pass">Re-enter Password<input type="password" value="" /></label>
+  <button class="btn">Save Changes</button>
+</form>
 
 <!-- Check goTenna connections -->
+<br /><br />
+<h3>GoTenna Connections</h3>
+<p>You are not connected to a goTenna device.</p>
+<br />
+<a>Connect to GoTenna</a>

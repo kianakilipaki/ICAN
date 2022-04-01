@@ -46,16 +46,20 @@
     <th></th>
     <th (click)="onSort('name', 'ascending')">&#9660; Name</th>
     <th (click)="onSort('position', 'ascending')">&#9660; Position</th>
-    <th (click)="onSort('groups', 'ascending')">&#9660; Groups</th>
-    <th (click)="onSort('accepted', 'ascending')">&#9660; Accepted</th>
-    <th (click)="onSort('isLeader', 'ascending')">&#9660; Is Leader</th>
+    <th class="hide" (click)="onSort('groups', 'ascending')">&#9660; Groups</th>
+    <th class="hide" (click)="onSort('accepted', 'ascending')">
+      &#9660; Accepted
+    </th>
+    <th class="hide" (click)="onSort('isLeader', 'ascending')">
+      &#9660; Is Leader
+    </th>
   </tr>
   <tr *ngFor="let item of items">
     <td><input type="checkbox" /></td>
     <td>{{ item.name }}</td>
     <td>{{ item.position }}</td>
-    <td>{{ item.groups }}</td>
-    <td>{{ item.accepted }}</td>
-    <td>{{ item.isLeader }}</td>
+    <td class="hide">{{ item.groups }}</td>
+    <td class="hide">{{ item.accepted }}</td>
+    <td class="hide">{{ item.isLeader }}</td>
   </tr>
 </table>

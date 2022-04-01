@@ -10,7 +10,9 @@
 <h4>To Do</h4>
 <div *ngIf="toDos">
   <ul class="to-do" *ngFor="let item of toDos">
-    <li id="{{ item.id }}">{{ item.title }} <span>Start</span></li>
+    <li id="{{ item.id }}" (click)="openForm(item.id)">
+      {{ item.name }} <span>Start</span>
+    </li>
   </ul>
 </div>
 <div *ngIf="!toDos">
@@ -20,10 +22,10 @@
 <!-- completed -->
 <h4>Completed</h4>
 <div *ngIf="toDos">
-  <ul class="to-do" *ngFor="let item of toDos">
-    <li id="{{ item.id }}" routerLink="openForm">
-      {{ item.title }}
-      <p>{{ item.date }}</p>
+  <ul class="to-do" *ngFor="let item of completed">
+    <li id="{{ item.id }}" (click)="openForm(item.formId)">
+      {{ item.formName }}
+      <p>{{ item.dateCompleted }}</p>
       <span>Edit</span>
     </li>
   </ul>
@@ -35,8 +37,10 @@
 <!-- other -->
 <h4>Other Forms</h4>
 <div *ngIf="toDos">
-  <ul class="to-do" *ngFor="let item of toDos">
-    <li id="{{ item.id }}">{{ item.title }} <span>Start</span></li>
+  <ul class="to-do" *ngFor="let item of all">
+    <li id="{{ item.id }}" (click)="openForm(item.id)">
+      {{ item.name }} <span>Start</span>
+    </li>
   </ul>
 </div>
 <div *ngIf="!toDos">

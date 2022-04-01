@@ -17,7 +17,7 @@ import { Component, OnInit } from '@angular/core';
     #main-container {
       height: 100vh;
       display: grid;
-      grid-template-columns: 15vw 85vw;
+      grid-template-columns: 15% 85%;
     }
     aside {
       z-index: 100;

@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./settings.component.scss']
 })
 export class SettingsComponent implements OnInit {
-
+  user = "Alan Smith";
+  email = "alanssmitty@gmail.com";
+  pass = "password";
   constructor() { }
 
   ngOnInit(): void {

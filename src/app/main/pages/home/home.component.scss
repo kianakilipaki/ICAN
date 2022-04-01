@@ -41,6 +41,12 @@
   p {
     margin: 20px 0;
   }
+  form {
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    width: auto;
+  }
 }
 form {
   margin: 20px 10px;
@@ -51,4 +57,13 @@ textarea {
   border-radius: 10px;
   width: 90%;
   height: 8em;
+}
+
+@media only screen and (max-width: 900px) {
+  .announcements {
+    padding: 1em;
+    form {
+      margin: -1em;
+    }
+  }
 }

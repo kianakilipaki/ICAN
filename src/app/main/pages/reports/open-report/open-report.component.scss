@@ -1,0 +1,64 @@
+@import "/src/app/shared/shared.scss";
+
+#report-container {
+  background-color: #fff;
+  border-radius: 0.5em;
+  box-shadow: 2px 1px 5px $gray;
+  padding-bottom: 2em;
+  h2 {
+    font-weight: 400;
+    padding: 1em;
+  }
+  .closed {
+    p img {
+      transform: rotate(0deg);
+    }
+    div {
+      display: none;
+    }
+  }
+  .open {
+    p img {
+      transform: rotate(180deg);
+    }
+    div {
+      display: block;
+    }
+  }
+  .closeO {
+    td img {
+      transform: rotate(0deg);
+    }
+    span {
+      display: none;
+    }
+  }
+  .openO {
+    td img {
+      transform: rotate(180deg);
+    }
+    span {
+      margin: 0.5em 2em;
+      display: block;
+    }
+  }
+  p {
+    background-color: $gray;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+  }
+  table {
+    width: 94%;
+    margin: 1em auto;
+    border-collapse: collapse;
+    th {
+      text-align: left;
+      font-weight: 200;
+      border-bottom: 1px solid $black;
+    }
+    td {
+      padding: 0.5em;
+      border-bottom: 1px solid $gray-light;
+    }
+  }
+}

@@ -4,9 +4,9 @@
             "id": 0,
             "username": "",
             "password": "",
-            "name": "John Smith",
+            "name": "Sarah Smith",
             "position": "secretary",
-            "img": "pic.jpg",
+            "img": "assets/ect/profile.svg",
             "groups": "MSA, council",
             "email": "johnsmity@gmail.com",
             "phone": "(129)123-2322",
@@ -15,7 +15,8 @@
         },
         {
             "id": 1,
-            "name": "John Smith",
+            "name": "Tom Caffery",
+            "img": "assets/ect/profile.svg",
             "position": "secretary",
             "groups": [
                 "MSA",
@@ -28,6 +29,7 @@
         {
             "id": 2,
             "name": "Alan Smith",
+            "img": "assets/ect/pic.jpg",
             "position": "secretary",
             "groups": [
                 "council"

@@ -21,7 +21,7 @@ import { ReportsComponent } from './main/pages/reports/reports.component';
 import { NewFormComponent } from './main/pages/reports/new-form/new-form.component';
 import { OpenFormComponent } from './main/pages/forms/open-form/open-form.component';
 import { OpenReportComponent } from './main/pages/reports/open-report/open-report.component';
-import { RoomListComponent } from './main/pages/messages/room-list/room-list.component';
+import { RoomListComponent } from './main/pages/messages/room-list.component';
 
 @NgModule({
   declarations: [

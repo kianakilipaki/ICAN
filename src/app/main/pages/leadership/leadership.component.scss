@@ -24,3 +24,17 @@
     font-size: 1em;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .groups {
+    margin: 1em 1em 3em 1em;
+    .list {
+      justify-items: center;
+      grid-gap: 2em;
+      grid-template-columns: 1fr 1fr;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+}

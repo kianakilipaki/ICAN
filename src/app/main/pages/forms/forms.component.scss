@@ -28,3 +28,9 @@ h4 {
     text-align: right;
   }
 }
+
+@media only screen and (max-width: 900px) {
+  li {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}

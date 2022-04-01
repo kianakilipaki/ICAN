@@ -11,22 +11,24 @@
 ></span>
 
 <!-- add new form/report -->
-<button class="btn" routerLink="newForm">Add New Report</button>
+<button class="btn" routerLink="newForm">Add New Form</button>
 
 <!-- Reports list -->
 <table class="table">
   <tr>
-    <th (click)="onSort('name', 'descending')">&#9660; Name</th>
+    <th (click)="onSort('name', 'ascending')">&#9660; Name</th>
     <th (click)="onSort('date', 'ascending')">&#9660; Date Added</th>
-    <th (click)="onSort('modified', 'ascending')">&#9660; Last Modified</th>
+    <th class="hide" (click)="onSort('modified', 'ascending')">
+      &#9660; Last Modified
+    </th>
     <th>Responses</th>
-    <th>Percent</th>
+    <th class="hide">Percent</th>
   </tr>
-  <tr *ngFor="let item of items">
+  <tr *ngFor="let item of items" (click)="openReport(item.id)">
     <td>{{ item.name }}</td>
     <td>{{ item.date }}</td>
-    <td>{{ item.modified }}</td>
+    <td class="hide">{{ item.modified }}</td>
     <td>{{ item.responses }}</td>
-    <td>{{ item.percent }}</td>
+    <td class="hide">{{ item.percent }}</td>
   </tr>
 </table>

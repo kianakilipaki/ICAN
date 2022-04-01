@@ -6,21 +6,27 @@
 <!-- Open existing chat -->
 <div id="container" *ngIf="openChat">
   <div id="header">
-    <h4 class="start">{{ info.name }}</h4>
-    <div *ngFor="let m of info.users">
-      <img class="pic" src="{{ m.pic }}" alt="pic" />
+    <h4 class="start">{{ chatroom.name }}</h4>
+    <div *ngFor="let m of members">
+      <img class="pic" src="{{ m.img }}" alt="pic" />
     </div>
     <a (click)="add = !add" *ngIf="!add"
       ><img class="icon" src="assets/ect/add-outline.svg" alt="+"
     /></a>
-    <input *ngIf="add" type="text" placeholder="Add to Chat" />
+    <input
+      *ngIf="add"
+      #user
+      type="text"
+      placeholder="Add to Chat"
+      (keyup.enter)="addUser(user.value); add = !add"
+    />
   </div>
   <!-- chat content -->
   <div id="content-container">
-    <div *ngFor="let c of info.chats">
-      <img class="pic" src="{{ c.pic }}" alt="pic" />
+    <div *ngFor="let c of chatroom.chats">
+      <img class="pic" src="{{ c.img }}" alt="pic" />
       <h4>
-        {{ c.user }} <i>- {{ c.date }}</i>
+        {{ c.name }} <i>- {{ c.date }}</i>
       </h4>
       <p>{{ c.message }}</p>
       <hr />

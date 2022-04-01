@@ -6,7 +6,12 @@ import forms from '../../../../../assets/jsons/forms.json';
 @Component({
   selector: 'app-new-form',
   templateUrl: './new-form.component.html',
-  styleUrls: ['./new-form.component.scss']
+  styles: [`
+  @import "/src/app/shared/shared.scss";
+  .form .name {
+    width: 90% !important;
+    max-width: none;
+  }`]
 })
 export class NewFormComponent implements OnInit {
   public clicks: any[] = [{}];
@@ -31,14 +36,6 @@ export class NewFormComponent implements OnInit {
   }
 
   onClickSubmitForm(f: NgForm) {
-    let newForm: any = {
-      id: 0,
-      name: f.value.name,  
-      question: f.value.question,
-      type: f.value.type,
-      options: f.value.options,
-      isRequired: !f.value.isRequired ? false : true,
-    }
-    forms.forms.push(newForm);
+    alert("Your new form has been added!");
   }
 }
