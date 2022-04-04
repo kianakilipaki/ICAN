@@ -24,7 +24,7 @@ header {
   flex-wrap: wrap;
   flex-direction: row;
   align-items: flex-end;
-  gap: 3em;
+  gap: 1em;
   border-bottom: 1px solid $gray;
   nav a {
     font-weight: 500;
@@ -149,6 +149,9 @@ header {
   .hide {
     display: none;
   }
+  div #intro {
+    margin-left: 0;
+  }
   img {
     position: initial !important;
     width: 100%;
@@ -167,5 +170,8 @@ header {
     margin: 0;
     padding: 1em;
     width: 100%;
+  }
+  #tech {
+    margin-left: 0;
   }
 }
