@@ -78,7 +78,7 @@
 
   nav {
     h1 {
-      font-size: 1.5em;
+      //font-size: 1.5em;
       padding: 30px;
     }
     a {
@@ -115,7 +115,7 @@
       }
     }
   }
-
+  
   .small {
     display: none;
   }
@@ -134,11 +134,9 @@
     .menu-bar {
       position: fixed;
       top: 0;
-      width: 2m;
-      margin: 1em;
-      background-color: $white;
-      padding: 0.5em;
-      border-radius: 20px;
+      width: 100%;
+      background-color: $blue;
+      padding: 0.8em;
     }
     .x {
       position: absolute;

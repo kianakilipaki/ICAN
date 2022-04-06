@@ -6,7 +6,7 @@
       <h1 class="hide">{{ organizationName }}</h1>
 
       <a routerLink="settings" routerLinkActive="active"
-        ><img class="icon" src="assets/ect/cog.svg" alt="cog" /><span
+        ><img class="icon" src="assets/icons/cog.svg" alt="cog" /><span
           class="hide"
           >Settings</span
         >
@@ -14,14 +14,14 @@
 
       <!-- Admin Pages -->
       <a routerLink="members" routerLinkActive="active"
-        ><img class="icon" src="assets/ect/members.svg" alt="members" /><span
+        ><img class="icon" src="assets/icons/members.svg" alt="members" /><span
           class="hide"
           >Manage Members</span
         ></a
       >
 
       <a routerLink="reports" routerLinkActive="active"
-        ><img class="icon" src="assets/ect/bar-graph.svg" alt="bars" /><span
+        ><img class="icon" src="assets/icons/bar-graph.svg" alt="bars" /><span
           class="hide"
           >Manage Reports</span
         ></a
@@ -29,7 +29,7 @@
 
       <!-- Logout -->
       <a class="end" routerLink="logout"
-        ><img class="icon" src="assets/ect/exit.svg" alt="exit" /><span
+        ><img class="icon" src="assets/icons/exit.svg" alt="exit" /><span
           class="hide"
           >Logout</span
         ></a
@@ -49,35 +49,35 @@
 
     <!-- Pages -->
     <a routerLink="home" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/home2.svg" alt="home" /><span
+      ><img class="icon" src="assets/icons/home2.svg" alt="home" /><span
         class="hide"
         >Home</span
       ></a
     >
 
     <a routerLink="profile" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/profile.svg" alt="profile" /><span
+      ><img class="icon" src="assets/icons/profile.svg" alt="profile" /><span
         class="hide"
         >Profile</span
       ></a
     >
 
     <a routerLink="forms" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/document-text.svg" alt="doc" /><span
+      ><img class="icon" src="assets/icons/document-text.svg" alt="doc" /><span
         class="hide"
         >Forms</span
       ></a
     >
 
     <a routerLink="leadership" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/groups.svg" alt="group" /><span
+      ><img class="icon" src="assets/icons/groups.svg" alt="group" /><span
         class="hide"
         >Leadership</span
       ></a
     >
 
     <a routerLink="messages" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/chat.svg" alt="chat" /><span
+      ><img class="icon" src="assets/icons/chat.svg" alt="chat" /><span
         class="hide"
         >Messages</span
       ></a
@@ -98,25 +98,27 @@
 <!-- small device menu -->
 <div id="menu-small">
   <div [className]="isActive ? 'open' : 'close'">
-    <img
-      class="menu-bar"
-      (click)="isActive = !isActive"
-      src="assets/ect/th-menu.svg"
-      alt="menu"
-    />
+    <div class="menu-bar">
+      <img
+        class="icon"
+        (click)="isActive = !isActive"
+        src="assets/icons/th-menu.svg"
+        alt="menu"
+      />
+    </div>
   </div>
   <!-- Secondary Navigation -->
   <div id="logout-nav-small" [className]="isActive ? 'close' : 'open'">
     <img
       (click)="isActive = !isActive"
       class="x"
-      src="assets/ect/add-outline.svg"
+      src="assets/icons/add-outline.svg"
       alt="x"
     />
     <nav>
       <!-- Shared Pages -->
       <a routerLink="settings" (click)="isActive = !isActive"
-        ><img class="icon" src="assets/ect/cog.svg" alt="cog" /><span
+        ><img class="icon" src="assets/icons/cog.svg" alt="cog" /><span
           class="hide"
           >Settings</span
         >
@@ -124,13 +126,13 @@
 
       <!-- Admin Pages -->
       <a routerLink="members" (click)="isActive = !isActive"
-        ><img class="icon" src="assets/ect/members.svg" alt="members" /><span
+        ><img class="icon" src="assets/icons/members.svg" alt="members" /><span
           class="hide"
           >Manage Members</span
         ></a
       >
       <a routerLink="reports" (click)="isActive = !isActive"
-        ><img class="icon" src="assets/ect/bar-graph.svg" alt="bars" /><span
+        ><img class="icon" src="assets/icons/bar-graph.svg" alt="bars" /><span
           class="hide"
           >Manage Reports</span
         ></a
@@ -138,7 +140,7 @@
 
       <!-- Logout -->
       <a class="end" routerLink="logout"
-        ><img class="icon" src="assets/ect/exit.svg" alt="exit" /><span
+        ><img class="icon" src="assets/icons/exit.svg" alt="exit" /><span
           class="hide"
           >Logout</span
         ></a
@@ -149,23 +151,23 @@
   <!-- Main Navigation -->
   <nav class="main-nav">
     <a routerLink="home" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/home2.svg" alt="home"
+      ><img class="icon" src="assets/icons/home2.svg" alt="home"
     /></a>
 
     <a routerLink="profile" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/profile.svg" alt="profile"
+      ><img class="icon" src="assets/icons/profile.svg" alt="profile"
     /></a>
 
     <a routerLink="forms" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/document-text.svg" alt="doc"
+      ><img class="icon" src="assets/icons/document-text.svg" alt="doc"
     /></a>
 
     <a routerLink="leadership" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/groups.svg" alt="group"
+      ><img class="icon" src="assets/icons/groups.svg" alt="group"
     /></a>
 
     <a routerLink="messages/0" routerLinkActive="active"
-      ><img class="icon" src="assets/ect/chat.svg" alt="chat"
+      ><img class="icon" src="assets/icons/chat.svg" alt="chat"
     /></a>
   </nav>
 </div>

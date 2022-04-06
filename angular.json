@@ -104,6 +104,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "ICAN-app:build:production",
+            "firebaseProject": "ican-2b124",
+            "firebaseHostingSite": "ican-2b124"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "ican-2b124": {
+      "hosting": {
+        "ICAN-app": [
+          "ican-2b124"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "ican-2b124"
+  }
+}

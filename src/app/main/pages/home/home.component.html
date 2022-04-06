@@ -11,7 +11,7 @@
     <a routerLink="{{ item.link }}">
       <li>
         {{ item.title }}
-        <img class="icon" src="assets/ect/add-solid.svg" alt="add" /></li
+        <img class="icon" src="assets/icons/add-solid.svg" alt="add" /></li
     ></a>
   </ul>
 </div>
@@ -25,7 +25,7 @@
   <div class="announcements" *ngFor="let item of announcements">
     <div *ngIf="isAdmin">
       <a (click)="edit = !edit"
-        ><img class="edit-icon icon" src="assets/ect/pencil.svg" alt="edit"
+        ><img class="edit-icon icon" src="assets/icons/pencil.svg" alt="edit"
       /></a>
     </div>
     <div *ngIf="!edit">
@@ -57,7 +57,7 @@
 </div>
 <div *ngIf="isAdmin" (click)="newAnn = !newAnn">
   <h4 class="addNew" *ngIf="!newAnn">
-    <img class="icon" src="assets/ect/add-outline.svg" alt="add" />Add new
+    <img class="icon" src="assets/icons/add-outline.svg" alt="add" />Add new
     Announcement
   </h4>
 </div>

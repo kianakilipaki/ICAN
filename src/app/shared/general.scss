@@ -1,0 +1,243 @@
+// Shared variables and styles
+
+// colors
+$blue: #9ab2bf;
+$red: #a02d33;
+$red-filter: invert(22%) sepia(23%) saturate(3948%) hue-rotate(326deg) brightness(106%) contrast(97%);
+$black: #313335;
+$black-filter: invert(18%) sepia(10%) saturate(239%) hue-rotate(169deg) brightness(93%) contrast(92%);
+$white: #f5f5f5;
+$white-filter: invert(98%) sepia(5%) saturate(24%) hue-rotate(309deg) brightness(116%) contrast(92%);
+$gray-light: #e4e4e4;
+$gray: #c9c9c9;
+$gray-filter: invert(99%) sepia(11%) saturate(0%) hue-rotate(177deg) brightness(83%) contrast(88%);
+$prettyColors: linear-gradient(#f5f5f5, #98b0be, #446a80);
+
+body {
+    background-color: $white;
+}
+
+// font styles
+body,
+h2,
+h4,
+h6,
+p,
+input,
+textarea,
+select {
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans",
+        "Helvetica Neue", Arial, sans-serif;
+    color: $black;
+}
+
+h1,
+h3,
+h5,
+a,
+button {
+    font-family: Cambria, Georgia, serif;
+    color: $black;
+}
+
+h2 {
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+h6 {
+    font-size: 1em;
+    font-style: italic;
+}
+
+p {
+    font-size: 14px;
+}
+
+// icons
+.icon,
+.edit-icon {
+    height: 1em;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.icon {
+    filter: $black-filter;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $red;
+
+    .icon {
+        filter: $red-filter;
+    }
+}
+
+a:active {
+    color: $white;
+
+    .icon {
+        filter: $white-filter;
+    }
+}
+
+// headers
+.header {
+    margin: 2em 0.5em;
+    color: $red;
+}
+
+//buttons
+.addNew {
+    background-color: $blue;
+    box-shadow: 1px 1px 4px $gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+
+    img {
+        margin-bottom: -3px;
+        filter: $black-filter;
+    }
+}
+
+// search bars
+.search {
+    input {
+        text-align: right;
+        padding: 0.5em;
+        margin: 20px;
+        width: 85%;
+        height: 2em;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        font-style: italic;
+    }
+
+    input::placeholder {
+        background-image: url(/assets/icons/search.svg);
+        background-repeat: no-repeat;
+        filter: $gray-filter;
+        color: $red;
+    }
+}
+
+// forms
+.form {
+    margin: auto;
+    max-width: 900px;
+    position: relative;
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 1px 2px 5px $gray;
+    border-radius: 10px;
+
+    input,
+    select,
+    textarea {
+        font-size: 1em;
+        display: block;
+        margin: 0.5em 0 1em 0;
+        padding: 0.5em;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        width: 50%;
+        max-width: 300px;
+    }
+
+    .check {
+        display: inline;
+        width: 2em !important;
+    }
+
+    .btn {
+        position: absolute;
+        right: 1em;
+        bottom: 1em;
+        background-color: $black;
+        color: $white;
+        border: none;
+        padding: 0.5em 2em;
+        border-radius: 7px;
+        font-size: 1em;
+    }
+
+    .btn:hover {
+        background-color: $gray;
+    }
+
+    .btn:active {
+        background-color: $white;
+    }
+}
+
+.pic {
+    background-color: $blue;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 100%;
+    float: left;
+    margin-right: 1em;
+}
+
+
+@media only screen and (max-width: 900px) {
+    p {
+        font-size: 18px;
+    }
+
+    .form {
+
+        input,
+        select,
+        textarea {
+            width: 100% !important;
+            max-width: none !important;
+        }
+
+        .btn {
+            position: initial !important;
+            width: 100% !important;
+            padding: 1em;
+        }
+    }
+
+    table.table {
+        margin: 1em 0;
+        width: 100%;
+
+        td {
+            white-space: normal;
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+
+    .search input {
+        font-size: 1em;
+        margin: 1em 0 !important;
+        width: 100% !important;
+    }
+}

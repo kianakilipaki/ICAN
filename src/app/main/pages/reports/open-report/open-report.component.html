@@ -13,7 +13,7 @@
     class="closed"
   >
     <p (click)="openQ(i)">
-      <img src="assets/ect/lil-arrow.svg" alt="" /> {{ i + 1 }}.
+      <img src="assets/icons/lil-arrow.svg" alt="" /> {{ i + 1 }}.
       {{ q.question }}
     </p>
     <div>
@@ -46,7 +46,7 @@
           (click)="openO(o + i + j)"
         >
           <td>
-            <img src="assets/ect/lil-arrow.svg" alt="" /> {{ o }}
+            <img src="assets/icons/lil-arrow.svg" alt="" /> {{ o }}
             <div *ngFor="let r of report">
               <span *ngIf="r.responses[i] == o">{{ r.user }}</span>
             </div>

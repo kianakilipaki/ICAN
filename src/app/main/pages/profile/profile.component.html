@@ -5,7 +5,7 @@
 <div class="profile" *ngFor="let profile of profiles">
   <div class="card-head">
     <a href=""
-      ><img class="edit-icon icon" src="assets/ect/pencil.svg" alt="edit"
+      ><img class="edit-icon icon" src="assets/icons/pencil.svg" alt="edit"
     /></a>
     <img class="pic" src="{{ profile.pic }}" alt="profile pic" />
     <h3>
@@ -37,7 +37,7 @@
 <!-- Add new profile -->
 <h5 class="addNew" *ngIf="!open">
   <a (click)="addProfile(); open = !open">
-    <img class="icon" src="assets/ect/add-outline.svg" alt="add" />Add new
+    <img class="icon" src="assets/icons/add-outline.svg" alt="add" />Add new
     profile</a
   >
 </h5>
