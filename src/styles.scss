@@ -1,4 +1,10 @@
-@import "/src/app/shared/general.scss";
+@import "app/shared/variables";
+@import "app/shared/font";
+@import "app/shared/util";
+@import "app/shared/forms";
+@import "app/shared/layout";
+@import "app/shared/nav";
+@import "app/shared/tables";
 
 *::after,
 *::before,

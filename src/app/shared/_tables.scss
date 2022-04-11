@@ -1,0 +1,15 @@
+@media only screen and (max-width: 900px) {
+
+    table.table {
+        margin: 1em 0;
+        width: 100%;
+
+        td {
+            white-space: normal;
+        }
+
+        .hide {
+            display: none;
+        }
+    }
+}

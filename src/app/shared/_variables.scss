@@ -1,0 +1,29 @@
+// colors
+$blue: #9ab2bf;
+$red: #a02d33;
+$red-filter: invert(22%) sepia(23%) saturate(3948%) hue-rotate(326deg) brightness(106%) contrast(97%);
+$black: #313335;
+$black-filter: invert(18%) sepia(10%) saturate(239%) hue-rotate(169deg) brightness(93%) contrast(92%);
+$white: #f5f5f5;
+$white-filter: invert(98%) sepia(5%) saturate(24%) hue-rotate(309deg) brightness(116%) contrast(92%);
+$gray-light: #e4e4e4;
+$gray: #c9c9c9;
+$gray-filter: invert(99%) sepia(11%) saturate(0%) hue-rotate(177deg) brightness(83%) contrast(88%);
+$prettyColors: linear-gradient(#f5f5f5, #98b0be, #446a80);
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;500&display=swap');
+
+$sans: "Rubik",
+Frutiger,
+"Frutiger Linotype",
+"Dejavu Sans",
+"Helvetica Neue",
+Arial,
+sans-serif;
+
+$serif: Cambria,
+Georgia,
+serif;
+
+// other

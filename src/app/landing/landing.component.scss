@@ -1,14 +1,9 @@
-@import "/src/app/shared/shared.scss";
+@import "../shared/variables";
 
 .landing {
   position: relative;
   width: 75vw;
   margin: 15em auto 0em auto;
-  p {
-    font-size: 1em;
-    line-height: 1.5em;
-  }
-
   .logo {
     width: 100px;
   }
@@ -25,7 +20,7 @@ header {
   flex-direction: row;
   align-items: flex-end;
   gap: 1em;
-  border-bottom: 1px solid $gray;
+  border-bottom: 2px solid $gray;
   nav a {
     font-weight: 500;
     font-size: 1.2em;
@@ -143,7 +138,7 @@ header {
   .landing {
     margin: 0;
     padding: 1em;
-    padding-top: 10em;
+    padding-top: 8em;
     width: 100%;
   }
   .hide {
@@ -151,6 +146,9 @@ header {
   }
   div #intro {
     margin-left: 0;
+    .left {
+      width:100%;
+    }
   }
   img {
     position: initial !important;

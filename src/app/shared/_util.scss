@@ -1,0 +1,75 @@
+// icons
+.icon,
+.edit-icon {
+    height: 1em;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+}
+
+.icon {
+    filter: $black-filter;
+}
+
+// headers
+.header {
+    margin: 2em 0.5em;
+    color: $red;
+}
+
+//buttons
+.addNew {
+    background-color: $blue;
+    box-shadow: 1px 1px 4px $gray;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+
+    img {
+        margin-bottom: -3px;
+        filter: $black-filter;
+    }
+}
+
+// search bars
+.search {
+    input {
+        text-align: right;
+        padding: 0.5em;
+        margin: 20px;
+        width: 85%;
+        height: 2em;
+        border: 1px solid $gray;
+        border-radius: 3px;
+        font-style: italic;
+    }
+
+    input::placeholder {
+        background-image: url(/assets/icons/search.svg);
+        background-repeat: no-repeat;
+        filter: $gray-filter;
+        color: $red;
+    }
+}
+
+// profile pic
+.pic {
+    background-color: $blue;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 100%;
+    float: left;
+    margin-right: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+    .search input {
+        font-size: 1em;
+        margin: 1em 0 !important;
+        width: 100% !important;
+    }
+}

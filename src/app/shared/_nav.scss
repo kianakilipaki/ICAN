@@ -1,0 +1,19 @@
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: $red;
+
+    .icon {
+        filter: $red-filter;
+    }
+}
+
+a:active {
+    color: $white;
+
+    .icon {
+        filter: $white-filter;
+    }
+}
