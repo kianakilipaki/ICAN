@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { provideDatabase } from '@angular/fire/database';
 import { ActivatedRoute } from '@angular/router';
 import { DataManager, Query, ReturnOption} from '@syncfusion/ej2-data';
 import rooms from '../../../../assets/jsons/chatrooms.json';
@@ -17,7 +18,7 @@ export class MessagesComponent implements OnInit {
   newUser: any;
   dm: DataManager = new DataManager(rooms.chatrooms);
   dm2: DataManager = new DataManager(members.members);
-  currentUser = { name:"Alan Smith", img:"assets/ect/pic.jpg"};
+  currentUser = { name:"Alan Smith", img:"assets/etc/pic.jpg"};
   members: { name: string, img: string }[] = [];
   chats: { name: string, img: string, date: string, message: string }[] = [];
 
@@ -27,7 +28,9 @@ export class MessagesComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    provideDatabase
+  }
 
   loadData(id: any) {
     if (isNaN(id)) {

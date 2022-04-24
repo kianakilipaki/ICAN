@@ -7,7 +7,6 @@ import forms from '../../../../../assets/jsons/forms.json';
   selector: 'app-new-form',
   templateUrl: './new-form.component.html',
   styles: [`
-  @import "/src/app/shared/shared.scss";
   .form .name {
     width: 90% !important;
     max-width: none;

@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   organizationName = "Ward230"; 
   userName = "Alan Smith"; 
   userTitle = "Bishop"; 
-  userPic = "assets/ect/pic.jpg"; 
+  userPic = "assets/etc/pic.jpg"; 
 
   
 
