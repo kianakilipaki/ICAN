@@ -16,23 +16,23 @@
             "name": "Team Alpha",
             "users": [
                 {
-                    "img": "assets/ect/pic.jpg",
+                    "img": "assets/etc/pic.jpg",
                     "name": "Alan Smith"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Walter Guy"
                 }
             ],
             "chats": [
                 {
-                    "img": "assets/ect/pic.jpg",
+                    "img": "assets/etc/pic.jpg",
                     "name": "Alan Smith",
                     "date": "3/26/22 7:16 pm",
                     "message": "How are you?"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Walter Guy",
                     "date": "3/26/22 7:18 pm",
                     "message": "I am great :P"
@@ -44,33 +44,33 @@
             "name": "Awesome Group",
             "users": [
                 {
-                    "img": "assets/ect/pic.jpg",
+                    "img": "assets/etc/pic.jpg",
                     "name": "Alan Smith"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Walter Guy"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Eric Schatz"
                 }
             ],
             "chats": [
                 {
-                    "img": "assets/ect/pic.jpg",
+                    "img": "assets/etc/pic.jpg",
                     "name": "Alan Smith",
                     "date": "3/26/22 7:16 pm",
                     "message": "How are you?"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Eric Schatz",
                     "date": "3/26/22 7:18 pm",
                     "message": "I am great :P"
                 },
                 {
-                    "img": "assets/ect/profile.svg",
+                    "img": "assets/etc/profile.svg",
                     "name": "Walter Guy",
                     "date": "3/26/22 7:18 pm",
                     "message": "Super duper"
